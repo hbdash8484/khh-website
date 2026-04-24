@@ -191,8 +191,8 @@ a {
 }
 
 .hero__crest {
-  width: 148px;
-  height: 148px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -420,8 +420,8 @@ a {
   }
 
   .hero__crest {
-    width: 112px;
-    height: 112px;
+    width: 160px;
+    height: 160px;
   }
 
   .hero__tagline {
