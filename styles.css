@@ -1,0 +1,467 @@
+/* ============================================================
+   KHH — Kims Heritage Holdings
+   Single-page stylesheet
+   ============================================================ */
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream:        #F5F0E8;
+  --cream-dark:   #EDE8DF;
+  --burgundy:     #6B1F2A;
+  --warm-black:   #2C2420;
+  --warm-brown:   #5A4A40;
+  --warm-gray:    #B0A090;
+  --border:       #D0C8BC;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sc:      'Cormorant SC', Georgia, serif;
+  --font-ui:      'Raleway', sans-serif;
+
+  --max-width: 960px;
+  --nav-height: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-black);
+  font-family: var(--font-ui);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--border);
+  height: var(--nav-height);
+}
+
+.nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__monogram-block {
+  width: 36px;
+  height: 36px;
+  background-color: var(--burgundy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.nav__monogram-block img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+
+.nav__wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav__name {
+  font-family: var(--font-sc);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--warm-black);
+  line-height: 1;
+}
+
+.nav__sub {
+  font-family: var(--font-ui);
+  font-size: 7px;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  line-height: 1;
+}
+
+.nav__link {
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--warm-black);
+  outline: none;
+}
+
+/* ---------- Section shared ---------- */
+.section {
+  padding: 96px 24px;
+}
+
+.section--alt {
+  background-color: var(--cream-dark);
+}
+
+.section--burgundy {
+  background-color: var(--burgundy);
+}
+
+.section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.section__label {
+  font-family: var(--font-sc);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  display: block;
+}
+
+.section__label--light {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 104px 24px 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  max-width: 560px;
+  text-align: center;
+}
+
+.hero__crest {
+  width: 148px;
+  height: 148px;
+  object-fit: contain;
+}
+
+.hero__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.hero__divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--burgundy);
+  opacity: 0.4;
+  display: block;
+}
+
+.hero__divider-diamond {
+  color: var(--burgundy);
+  font-size: 8px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--warm-black);
+  line-height: 1.3;
+}
+
+.hero__sub {
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+/* ---------- About ---------- */
+.about__body {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--warm-brown);
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+/* ---------- Focus ---------- */
+.focus__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 40px;
+  width: 100%;
+  text-align: left;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pillar__title {
+  font-family: var(--font-sc);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: var(--warm-black);
+  line-height: 1.4;
+}
+
+.pillar__numeral {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--burgundy);
+  margin-right: 4px;
+}
+
+.pillar__body {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--warm-brown);
+  line-height: 1.75;
+}
+
+/* ---------- Philosophy ---------- */
+.philosophy__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 640px;
+  quotes: none;
+}
+
+/* ---------- Contact ---------- */
+.contact__email {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--warm-brown);
+  transition: color 0.2s ease;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.contact__email:hover,
+.contact__email:focus-visible {
+  color: var(--burgundy);
+  outline: none;
+}
+
+.contact__note {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: var(--warm-gray);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--cream);
+  padding: 40px 24px;
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer__copy {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--warm-gray);
+}
+
+.footer__address {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.8;
+  color: var(--warm-gray);
+  text-align: right;
+}
+
+/* ============================================================
+   Responsive — Tablet
+   ============================================================ */
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 24px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 24px 72px;
+  }
+
+  .focus__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .pillar {
+    align-items: center;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer__address {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Responsive — Mobile
+   ============================================================ */
+@media (max-width: 480px) {
+  :root {
+    --nav-height: 56px;
+  }
+
+  .nav__inner {
+    padding: 0 16px;
+  }
+
+  .nav__name {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .nav__sub {
+    display: none;
+  }
+
+  .section {
+    padding: 56px 16px;
+  }
+
+  .hero {
+    padding: 64px 16px 56px;
+  }
+
+  .hero__crest {
+    width: 112px;
+    height: 112px;
+  }
+
+  .hero__tagline {
+    font-size: 22px;
+  }
+
+  .about__body {
+    font-size: 17px;
+  }
+
+  .focus__grid {
+    gap: 32px;
+  }
+
+  .philosophy__quote {
+    font-size: 18px;
+  }
+
+  .contact__email {
+    font-size: 17px;
+  }
+
+  .footer {
+    padding: 32px 16px;
+  }
+}
+
+/* ---------- Accessibility: focus styles ---------- */
+:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 3px;
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .nav {
+    position: static;
+  }
+}
