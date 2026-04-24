@@ -80,7 +80,7 @@ a {
 .nav__monogram-block {
   width: 36px;
   height: 36px;
-  background-color: var(--burgundy);
+  background-color: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,8 +306,6 @@ a {
   font-weight: 400;
   color: var(--warm-brown);
   transition: color 0.2s ease;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 2px;
 }
 
 .contact__email:hover,
