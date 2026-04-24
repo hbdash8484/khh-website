@@ -18,7 +18,7 @@
 | Burgundy     | #6B1F2A   | Brand accent, Philosophy bg  |
 | Warm Black   | #2C2420   | Primary text                 |
 | Warm Brown   | #5A4A40   | Body text                    |
-| Warm Gray    | #B0A090   | Labels, tertiary text        |
+| Warm Gray    | #8A7A6A   | Labels, tertiary text        |
 | Border       | #D0C8BC   | All dividers and borders     |
 
 ### Logo Assets
